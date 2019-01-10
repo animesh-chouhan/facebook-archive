@@ -13,6 +13,9 @@
 
 In light of the recent facebook's data breach, Mark Zuckerberg made all the data available for each user via Facebook. You're going to need to download it, we'll get to it shortly. There are some things that would take a lot of time (too costly API calls) online, but can be easily done on archived data.
 
+Note to KWoC contributors: All issues are available for KWoC, feel free to work on any issue after being assigned.
+
+
 ## Table of Contents
 
 - [facebook-archive](#facebook-archive)
@@ -21,6 +24,7 @@ In light of the recent facebook's data breach, Mark Zuckerberg made all the data
   - [Usage](#usage)
     - [Friends](#friends)
     - [Messages](#messages)
+    - [Locations](#locations)
   - [Contributing](#contributing)
   - [Features](#features)
     - [Your friends](#your-friends)
@@ -28,6 +32,7 @@ In light of the recent facebook's data breach, Mark Zuckerberg made all the data
     - [Friend Request](#friend-request)
     - [Your reactions](#your-reactions)
     - [Your posts and comments](#your-posts-and-comments)
+    - [Your locations](#your-locations)
   - [Observations](#observations)
   - [Why](#why)
   - [License](#license)
@@ -80,6 +85,17 @@ What's this id?
 2. Click messages. Search for the person / conversation you want to analyse.
 3. Clicking on that chat should open a url like ; 'file:///home/kaustubh/GitHub/facebook-kaustubhhiware/messages/511.html'. For this particular chat, 511 is the id for this particular conversation.
 [↥ back to top](#table-of-contents)
+
+### Locations
+
+**Will be updated soon**
+
+* Plot your location history.
+ ```
+ > python where_have_you_been.py 
+ Enter facebook archive extracted location: "location of extracted, downloaded zip: like facebook-kaustubhhiware" 
+ ```
+ [↥ back to top](#table-of-contents)
 
 ## Contributing
 
@@ -146,6 +162,16 @@ Plot all messages so far,
 </details>
 
 [↥ back to top](#table-of-contents)
+### Top_10_friends_whom_I_message and Top_10_friends_who_message_me
+Find the top ten friends whom you message and plot each friends no. of messages as a function of time
+https://github.com/hadesanirban/facebook-archive/tree/master/images/Top_10_Friends_whom_I_message
+* Plot Top_ten_Friends.
+ ```
+ > python plot Top_ten_Friends.py --num_friends 7 (for example)
+ enter your official facebook name: "your name as in facebook i.e. Anirban Panda"
+ Enter facebook archive extracted location: "location of extracted, downloaded zip: like facebook-kaustubhhiware"
+ ```
+ Also added a new command line argument named num_friends which helps you to plot as many friends as you want but default value is set to 10.
 
 ### Friend Request
 Plot the friends you make every day(Red) ,friend request send every day(green) and friend request received every day(blue)
@@ -193,6 +219,15 @@ Wordcloud of common words in your posts and comments
 
  ![](images/wordclouds/wordcloud_tagged_friends.png)
 </details>
+
+### Your Locations
+
+Plot all locations so far,
+
+ ![](images/where_have_you_been/Location_history_640x480.png)
+
+[↥ back to top](#table-of-contents)
+
 
 
 ## Observations
